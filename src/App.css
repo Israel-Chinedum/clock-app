@@ -1,0 +1,285 @@
+/* COUNTDOWN APPLICATION CSS */
+*{
+  font-family: 'Courier New';
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#main-container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/src/assets/images/jonatan-pie-3l3RwQdHRHg-unsplash.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#message{
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 10px;
+  background-color: black;
+  animation: display 0.2s linear;
+  position: absolute;
+  margin-top: -50vh;
+}
+
+#message p{
+  font-size: 1.1rem;
+  font-family: lucida console;
+  width: max-content;
+}
+
+@keyframes display{
+  from{
+    width: 0;
+  } to{
+   width: 250px;
+  }
+}
+
+#container{
+  width: 100vw;
+  overflow: hidden;
+}
+
+#slider{
+  width: 400%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ==========HomeView Component Styling========== */
+#home-view-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#home-view-section h1{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========CountDown Component Styling========== */
+#count-down{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#count-down h1{
+  font-size: 3rem;
+}
+
+#input{
+  padding: 10px;
+  background-color: transparent;
+  border-bottom: 1px solid grey;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 80vw;
+  color: white;
+  outline: none;
+}
+#input::placeholder{
+  color: white;
+}
+
+#start-count-down{
+  padding: 10px;
+  width: 100px;
+  margin-top: 50px;
+  font-size: 1.2rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  border: 1px solid grey
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========Buttons Component Styling========== */
+#buttons{
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#buttons li{
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid grey;
+  box-shadow: 2px 2px 10px 5px black;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.781);
+}
+
+#buttons li:hover{
+  background-color: rgba(255, 255, 255, 0.425);
+  color: black;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========MyCountDown Component Styling========== */
+#my-count-down{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}    
+
+#my-count-down h1{
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+#my-count-down ul{
+  display: flex;
+  list-style: none;
+  margin-top: 50px;
+}
+
+#my-count-down button{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 1rem;
+  border: 1px solid grey;
+  font-size: 1.2rem;
+  width: 150px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+
+/* ==========StopWatch Component Styling========== */
+#stop-watch{
+  width: 100vw;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#stop-watch h1{
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+#stop-watch ul{
+  list-style: none;
+}
+
+#stamped-time-container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#stamped-time-container::-webkit-scrollbar{
+  background-color: transparent;
+  width: 7px;
+}
+
+#stamped-time-container::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 1rem;
+}
+
+#stamped-time-container li{
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.671);
+}
+
+#stop-watch button{
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#stop-watch-buttons{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+
+
+/* ==========Screen Width(Responsive) Styling========== */
+
+@media(width > 500px){
+
+}
+
+@media(width <= 500px){
+  #buttons li{
+    font-size: 1rem;
+    padding: 10px;
+    align-items: center;
+  }
+
+  #stamped-time-container{
+    height: 200px;
+  }
+
+}
+
+
